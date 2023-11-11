@@ -20,9 +20,10 @@ Description: A music player using the Spotify API.
 ⠀⢻⣆⠀⠀⠈⢻⣿⣿⣷⣶⣤⣄⣀⣀⣀⣠⣤⣶⣶⣶⣶⣶⣶⣶⣿⣿⣿⣿⣿⣿⣟⡉⠀⠀⠀⠀⠀
 ⠀⠀⢻⣦⡄⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠀⠀⠀⠀
 ⠀⢀⣿⣿⣿⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡧⠀⠀⠀⠀
-################################################################################################################################################################################################################################################################################################################
-MM.DD.YYYY.TTTT - Description of changes made.
+
 11.11.2023.0145-- Only implemented Playlists so far. Menu works, music player isn't tested yet. Need to find a way to bypass the authentication process for premium access. Will look into it later. Committing for now to save progress and to get repo started. - RF
+
+11.11.2023.1813-- Added the ability to search for playlists and play them. Also added the ability to search for tracks and add them to a playlist. - RF
 """
 
 import spotipy
@@ -47,6 +48,15 @@ def search_for_playlist(query):
     results = sp.search(q=query, type='playlist')
     playlists = results['playlists']['items']
     return playlists
+
+def search_for_track(query):
+    results = sp.search(q=query, type='track')
+    tracks = results['tracks']['items']
+    return tracks
+
+def add_track_to_playlist(track_uri, playlist_id):
+    sp.playlist_add_items(playlist_id, items=[track_uri])
+    print(f"Track added to playlist.")
 
 def play_playlist(playlist_uri, shuffle=False):
     try:
@@ -82,8 +92,9 @@ while True:
     print("2. Play a playlist by index")
     print("3. Play a custom playlist by index")
     print("4. Shuffle play a custom playlist by index")
-    print("5. Control playback (play/pause/next/previous)")
-    print("6. Exit")
+    print("5. Search for a track and add to playlist")
+    print("6. Control playback (play/pause/next/previous)")
+    print("7. Exit")
      
 
 
@@ -122,9 +133,21 @@ while True:
         else:
             print("No custom playlists available. Please add some first.")
     elif choice == "5":
+        query = input("Enter the track name: ")
+        tracks = search_for_track(query)
+        for i, track in enumerate(tracks):
+            print(f"{i+1}. {track['name']} by {', '.join([artist['name'] for artist in track['artists']])}")
+
+        index = int(input("Enter the track index to add to playlist: ")) - 1
+        if 0 <= index < len(tracks):
+            track_uri = tracks[index]['uri']
+
+            # Replace 'your_playlist_id' with the actual ID of the playlist where you want to add the track
+            add_track_to_playlist(track_uri, 'your_playlist_id')
+    elif choice == "6":
         action = input("Enter the action (play/pause/next/previous): ")
         control_playback(action)
-    elif choice == "6":
+    elif choice == "7":
         print("Exiting the Music Player.")
         break
     else:

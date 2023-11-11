@@ -20,6 +20,9 @@ Description: A music player using the Spotify API.
 ⠀⢻⣆⠀⠀⠈⢻⣿⣿⣷⣶⣤⣄⣀⣀⣀⣠⣤⣶⣶⣶⣶⣶⣶⣶⣿⣿⣿⣿⣿⣿⣟⡉⠀⠀⠀⠀⠀
 ⠀⠀⢻⣦⡄⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠀⠀⠀⠀
 ⠀⢀⣿⣿⣿⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡧⠀⠀⠀⠀
+################################################################################################################################################################################################################################################################################################################
+MM.DD.YYYY.TTTT - Description of changes made.
+11.11.2023.0145-- Only implemented Playlists so far. Menu works, music player isn't tested yet. Need to find a way to bypass the authentication process for premium access. Will look into it later. Committing for now to save progress and to get repo started. - RF
 """
 
 import spotipy
@@ -126,8 +129,3 @@ while True:
         break
     else:
         print("Invalid choice. Please try again.")
-
-"""
-MM.DD.YYYY.TTTT - Description of changes made.
-11.11.2023.0145-- Only implemented Playlists so far. Menu works, music player isn't tested yet. Need to find a way to bypass the authentication process for premium access. Will look into it later. Committing for now to save progress and to get repo started. - RF
-"""

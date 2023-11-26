@@ -1,0 +1,38 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:single-column.html'}
+components:
+- type: ColumnPanel
+  properties: {}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: Title
+    properties: {text: Booper Beats, bold: true, align: center, font_size: 59}
+    type: Label
+    layout_properties: {grid_position: 'WRXXRF,RCLUAC'}
+    data_bindings: []
+  - name: button_3
+    properties: {text: Order Now, bold: true, align: center}
+    type: Button
+    layout_properties: {grid_position: 'ECMODY,EIVHKM'}
+    event_bindings: {click: button_3_click}
+  - name: button_4
+    properties: {text: Specials, bold: true, enabled: true}
+    type: Button
+    layout_properties: {grid_position: 'DMSNUK,TCNIJG'}
+    event_bindings: {click: button_4_click}
+  - name: button_5
+    properties: {text: Playlist, bold: true}
+    type: Button
+    layout_properties: {grid_position: 'DMSNUK,LFAPPJ'}
+    event_bindings: {click: button_5_click}
+- name: button_1
+  properties: {text: '', icon: 'fa:question-circle-o'}
+  type: Button
+  layout_properties: {slot: nav-links}
+- name: button_2
+  properties: {text: '', icon: 'fa:shopping-cart'}
+  type: Button
+  layout_properties: {slot: nav-links}

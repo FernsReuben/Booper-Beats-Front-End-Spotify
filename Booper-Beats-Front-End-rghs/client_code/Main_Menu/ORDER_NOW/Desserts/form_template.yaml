@@ -1,0 +1,68 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:dashboard.html'}
+components:
+- type: ColumnPanel
+  properties: {}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: card_1
+    properties: {role: card, col_widths: '{"BXBLFW":25,"WPDHDR":15,"QXWEBC":15,"VJDZML":30}'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'CLLZJY,GGMIIM'}
+    components:
+    - name: label_2
+      properties: {text: Pastries, align: center}
+      type: Label
+      layout_properties: {grid_position: 'FNGFQI,WPDHDR WQPKBR,RLZXBG'}
+    - name: button_1
+      properties: {text: Chocolate Cake}
+      type: Button
+      layout_properties: {grid_position: 'FNGFQI,WPDHDR KOXSNH,QDICUP'}
+    - name: button_2
+      properties: {text: Apple Pie}
+      type: Button
+      layout_properties: {grid_position: 'FNGFQI,WPDHDR EZZRXV,GXCVWS'}
+    - name: label_2_copy
+      properties: {text: Ice Cream, align: center}
+      type: Label
+      layout_properties: {grid_position: 'FNGFQI,QXWEBC SUAGMQ,RWTOHQ'}
+    - name: button_8
+      properties: {text: Vanilla Ice Cream}
+      type: Button
+      layout_properties: {grid_position: 'FNGFQI,QXWEBC PWRCOE,GXABUH'}
+    - name: button_9
+      properties: {text: Chocolate Ice Cream}
+      type: Button
+      layout_properties: {grid_position: 'FNGFQI,QXWEBC EWZSGM,AJEEOM'}
+    - name: button_3
+      properties: {text: Cookies and Cream Ice Cream}
+      type: Button
+      layout_properties: {grid_position: 'FNGFQI,QXWEBC KAYJCO,YKXXNG'}
+  - name: card_3
+    properties: {role: card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'TTRNVQ,XHTVAX'}
+    components:
+    - name: button_5
+      properties: {text: '', icon: 'fa:fast-backward'}
+      type: Button
+      layout_properties: {grid_position: 'WYVSDS,UESHWQ'}
+    - name: button_4
+      properties: {text: '', icon: 'fa:play-circle'}
+      type: Button
+      layout_properties: {grid_position: 'WYVSDS,NRJHVQ'}
+    - name: button_6
+      properties: {text: '', icon: 'fa:fast-forward'}
+      type: Button
+      layout_properties: {grid_position: 'WYVSDS,CWOSWU'}
+- name: label_1
+  properties: {text: Desserts}
+  type: Label
+  layout_properties: {slot: title}
+- name: button_7
+  properties: {text: '', icon: 'fa:shopping-cart'}
+  type: Button
+  layout_properties: {slot: nav-right}

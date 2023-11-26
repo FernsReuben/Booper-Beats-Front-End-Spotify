@@ -1,0 +1,95 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:dashboard.html'}
+components:
+- type: ColumnPanel
+  properties: {}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: card_1
+    properties: {role: card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'IBEUAY,NGALZM'}
+    components:
+    - name: image_1
+      properties: {source: _/theme/image_2023-11-25_184628461.png, height: 218, visible: true}
+      type: Image
+      layout_properties: {grid_position: 'TVYPOI,GJAWDG HMLXUH,EWUVXO'}
+      data_bindings: []
+    - name: label_2
+      properties: {text: Original}
+      type: Label
+      layout_properties: {grid_position: 'TVYPOI,GJAWDG POHCOU,ZDPNON'}
+    - name: rich_text_1
+      properties: {content: Description of a Original Crust Pizza}
+      type: RichText
+      layout_properties: {grid_position: 'TVYPOI,GJAWDG GPSOAX,FIMBQI'}
+      components: []
+    - name: image_1_copy
+      properties: {source: _/theme/image_2023-11-25_184628461.png, height: 218}
+      type: Image
+      layout_properties: {grid_position: 'TVYPOI,VELDDN THWKMD,JXGLXJ'}
+    - name: label_2_copy
+      properties: {text: Stuffed}
+      type: Label
+      layout_properties: {grid_position: 'TVYPOI,VELDDN JDADLK,IARETT'}
+    - name: rich_text_1_copy
+      properties: {content: Description of a Stuffed Crust Pizza}
+      type: RichText
+      layout_properties: {grid_position: 'TVYPOI,VELDDN PXQXMR,VHTTKD'}
+      components: []
+    - name: image_1_copy_copy
+      properties: {source: _/theme/image_2023-11-25_184628461.png, height: 218}
+      type: Image
+      layout_properties: {grid_position: 'TVYPOI,GCCFQD PNRUED,TEUFDH'}
+    - name: label_2_copy_copy
+      properties: {text: Cauliflower}
+      type: Label
+      layout_properties: {grid_position: 'TVYPOI,GCCFQD NFWYDO,ZDZNKM'}
+    - name: rich_text_1_copy_copy
+      properties: {content: Description of a Cauliflower Crust Pizza}
+      type: RichText
+      layout_properties: {grid_position: 'TVYPOI,GCCFQD MQFPDG,UOCEFI'}
+  - name: card_3
+    properties: {role: card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'TTRNVQ,XHTVAX'}
+    components:
+    - name: button_5
+      properties: {text: '', icon: 'fa:fast-backward'}
+      type: Button
+      layout_properties: {grid_position: 'WYVSDS,UESHWQ'}
+    - name: button_4
+      properties: {text: '', icon: 'fa:play-circle'}
+      type: Button
+      layout_properties: {grid_position: 'WYVSDS,NRJHVQ'}
+    - name: button_6
+      properties: {text: '', icon: 'fa:fast-forward'}
+      type: Button
+      layout_properties: {grid_position: 'WYVSDS,CWOSWU'}
+- name: label_1
+  properties: {text: Create a Pizza}
+  type: Label
+  layout_properties: {slot: title}
+- name: button_7
+  properties: {text: '', icon: 'fa:shopping-cart'}
+  type: Button
+  layout_properties: {slot: nav-right}
+- name: button_1
+  properties: {text: Crust}
+  type: Button
+  layout_properties: {slot: sidebar}
+- name: button_2
+  properties: {text: Sauces}
+  type: Button
+  layout_properties: {slot: sidebar}
+- name: button_3
+  properties: {text: Toppings}
+  type: Button
+  layout_properties: {slot: sidebar}
+- name: button_8
+  properties: {text: Confirm Order}
+  type: Button
+  layout_properties: {slot: sidebar}

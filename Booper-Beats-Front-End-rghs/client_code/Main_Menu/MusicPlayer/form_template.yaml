@@ -1,0 +1,73 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:dashboard.html'}
+components:
+- type: ColumnPanel
+  properties: {}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: card_2
+    properties: {role: card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'ESBNME,IIPCMQ'}
+    components:
+    - name: image_1
+      properties: {}
+      type: Image
+      layout_properties: {grid_position: 'CBJDDR,MOZVDH'}
+  - name: card_3
+    properties: {role: card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'ESBNME,RQCNHN XGKOSP,YMIKZJ'}
+    components:
+    - name: label_2
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'EJEMON,LFHRTP'}
+    - name: label_3
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'EJEMON,YUNKKF'}
+    - name: label_4
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'EJEMON,OIFQRI'}
+  - name: card_1
+    properties: {role: card, col_widths: '{"ZNPOPX":20,"IOTWOQ":40,"SDECZS":30,"SBPHFZ":30,"WNYLJU":30,"BIAXRL":30}'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'ESBNME,RQCNHN SUTMAT,HMVGJY'}
+    components:
+    - name: button_1
+      properties: {text: button_1}
+      type: Button
+      layout_properties: {grid_position: 'GSROXV,ZNPOPX ZUIWXS,NIORXI'}
+    - name: button_4
+      properties: {text: button_4}
+      type: Button
+      layout_properties: {grid_position: 'GSROXV,ZNPOPX XYEIJA,FOQVCB'}
+    - name: button_2
+      properties: {text: button_2}
+      type: Button
+      layout_properties: {grid_position: 'GSROXV,IOTWOQ WWAQRY,SDECZS'}
+    - name: button_5
+      properties: {text: button_5}
+      type: Button
+      layout_properties: {grid_position: 'GSROXV,IOTWOQ WWAQRY,SBPHFZ'}
+    - name: button_3
+      properties: {text: button_3}
+      type: Button
+      layout_properties: {grid_position: 'GSROXV,IOTWOQ UYFACH,WNYLJU'}
+    - name: button_6
+      properties: {text: button_6}
+      type: Button
+      layout_properties: {grid_position: 'SINCGL,OPHCHA GSROXV,IOTWOQ UYFACH,BIAXRL'}
+- name: label_1
+  properties: {text: Eatlist}
+  type: Label
+  layout_properties: {slot: title}
+- name: button_7
+  properties: {text: '', icon: 'fa:shopping-cart'}
+  type: Button
+  layout_properties: {slot: nav-right}
